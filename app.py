@@ -14,11 +14,10 @@ SLEEP_TIME = 0.25
 # Selenium Driver Initialization
 def initialize_driver():
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
+    options.add_argument('--headless')  # Tarayıcıyı arka planda çalıştırmak için
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    service = Service('https://books.toscrape.com/')  # Chromedriver yolunu belirtin
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(options=options)
     return driver
 
 # Function to scrape book details
