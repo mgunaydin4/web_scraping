@@ -17,7 +17,7 @@ def initialize_driver():
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    service = Service('/path/to/chromedriver')  # Chromedriver yolunu belirtin
+    service = Service('https://books.toscrape.com/')  # Chromedriver yolunu belirtin
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
