@@ -17,7 +17,7 @@ def initialize_driver():
     options.add_argument('--headless')  # Tarayıcıyı arka planda çalıştırmak için
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(services = BASE_URL ,options=options)
+    driver = webdriver.Chrome(options=options)
     return driver
 
 
