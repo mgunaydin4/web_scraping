@@ -5,17 +5,17 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import re
 import pandas as pd
+import undetected_chromedriver as uc
+
 
 SLEEP_TIME = 0.25
 
 
 # Selenium Driver Initialization
 def initialize_driver():
-    options = webdriver.ChromeOptions()
-    options.add_argument('--headless')  # Tarayıcıyı arka planda çalıştırmak için
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=options)
+    options = uc.ChromeOptions()
+    options.add_argument('--headless')
+    driver = uc.Chrome(options=options)
     return driver
 
 
