@@ -12,24 +12,14 @@ SLEEP_TIME = 0.25
 
 
 # Selenium Driver Initialization
-#def initialize_driver():
-#    options = webdriver.ChromeOptions()
-#    options.add_argument('--headless')  # Tarayıcıyı arka planda çalıştırmak için
-#    options.add_argument('--no-sandbox')
-#    options.add_argument('--disable-dev-shm-usage')
-#    driver = webdriver.Chrome(options=options)
-#    return driver
 def initialize_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # Tarayıcıyı arka planda çalıştırmak için
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-
-    # chromedriver'ın tam yolunu belirtin
-    service = Service(BASE_URL)  # Burada doğru yolu kullanın
-    driver = webdriver.Chrome(service=service, options=options)
-    
+    driver = webdriver.Chrome(services = BASE_URL ,options=options)
     return driver
+
 
 # Function to scrape book details
 def get_book_detail(driver, url):
