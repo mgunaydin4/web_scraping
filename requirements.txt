@@ -1,5 +1,0 @@
-streamlit
-selenium
-bs4
-pandas
-undetected-chromedriver
